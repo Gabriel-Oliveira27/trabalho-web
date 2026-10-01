@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-xl);
+    max-width: var(--largura-max);
+    margin-inline: auto;
+    padding: var(--espaco-xl) var(--espaco-md);
+}
+
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--espaco-lg);
+}
+
+@media (min-width: 768px) {
+    .grade--home-itens {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

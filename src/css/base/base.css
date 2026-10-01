@@ -1,0 +1,15 @@
+body {
+    font-family: var(--fonte-base);
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+a {
+    color: var(--cor-primaria);
+}

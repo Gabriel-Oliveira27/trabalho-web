@@ -1,0 +1,23 @@
+
+:root {
+    --cor-fundo: #f4f6f8;
+    --cor-superficie: #ffffff;
+    --cor-texto: #1f2933;
+    --cor-primaria: #0b62c4;
+    --cor-borda: #ccc;
+
+    --espaco-sm: 0.5rem;
+    --espaco-md: 1rem;
+    --espaco-lg: 1.5rem;
+    --espaco-xl: 2rem;
+
+    --fonte-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --tamanho-titulo: clamp(1.5rem, 4vw, 2.5rem);
+
+    --raio: 0.75rem;
+    --sombra: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --sombra-destaque: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transicao: 0.2s ease;
+
+    --largura-max: 1100px;
+}
