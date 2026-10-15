@@ -1,8 +1,126 @@
-@import "base/variables.css";
-@import "base/reset.css";
-@import "base/base.css";
+:root {
+    --cor-fundo: #f4f6f8;
+    --cor-superficie: #ffffff;
+    --cor-texto: #1f2933;
+    --cor-primaria: #0b62c4;
+    --cor-borda: #ccc;
 
-@import "layout/grid.css";
+    --espaco-sm: 0.5rem;
+    --espaco-md: 1rem;
+    --espaco-lg: 1.5rem;
+    --espaco-xl: 2rem;
 
-@import "components/header.css";
-@import "components/card.css";
+    --fonte-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --tamanho-titulo: clamp(1.5rem, 4vw, 2.5rem);
+
+    --raio: 0.75rem;
+    --sombra: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --sombra-destaque: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transicao: 0.2s ease;
+
+    --largura-max: 1100px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-base);
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+a {
+    color: var(--cor-primaria);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-xl);
+    max-width: var(--largura-max);
+    margin-inline: auto;
+    padding: var(--espaco-xl) var(--espaco-md);
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--espaco-lg);
+}
+
+@media (min-width: 768px) {
+    .grade--home-itens {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espaco-sm);
+    padding-bottom: var(--espaco-md);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.header__titulo {
+    margin: 0;
+    font-size: var(--tamanho-titulo);
+}
+
+.card {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    transition: box-shadow var(--transicao), transform var(--transicao);
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: var(--sombra-destaque);
+    transform: translateY(-2px);
+}
+
+.card__link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-sm);
+    padding: var(--espaco-md);
+    border-radius: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card__link:focus-visible {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+.card__titulo {
+    margin: 0;
+    font-size: 1.125rem;
+    text-align: center;
+}
