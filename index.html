@@ -3,58 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itens de redes de computadores</title>
+    <title>Atividades de Web 1</title>
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-    <main class="container">
-        <header class="header">
-            <h1 class="header__titulo">Itens de redes de computadores</h1>
+    <div class="container">
+        <header>
+            <h1>Atividades de Web 1</h1>
+            <p>Aqui eu vou colocando o que fiz e o que aprendi em cada atividade.</p>
         </header>
 
-        <div class="grade grade--home-itens">
-            <article class="card">
-                <a class="card__link" href="view/roteador.html">
-                    <img class="card__img" src="src/img/wifi-router.png" alt="Roteador">
-                    <h2 class="card__titulo">Roteador</h2>
-                </a>
-            </article>
-
-            <article class="card">
-                <a class="card__link">
-                    <img class="card__img" src="src/img/hub.png" alt="Switch">
-                    <h2 class="card__titulo">Switch</h2>
-                </a>
-            </article>
-
-            <article class="card">
-                <a class="card__link">
-                    <img class="card__img" src="src/img/wifi.png" alt="Access Point">
-                    <h2 class="card__titulo">Access Point</h2>
-                </a>
-            </article>
-
-            <article class="card">
-                <a class="card__link">
-                    <img class="card__img" src="src/img/firewall-protection.png" alt="Firewall">
-                    <h2 class="card__titulo">Firewall</h2>
-                </a>
-            </article>
-
-            <article class="card">
-                <a class="card__link">
-                    <h2 class="card__titulo">DMZ</h2>
-                </a>
-            </article>
-
-            <article class="card">
-                <a class="card__link">
-                    <h2 class="card__titulo">Honeypot</h2>
-                </a>
-            </article>
+        <div class="atividade">
+            <h2>N2 - Atividade 01: Primeiros passos com JavaScript</h2>
+            <p>Liguei um arquivo .js na página e fiz um botão mostrar uma mensagem quando é clicado.</p>
+            <p>O que aprendi: usar o querySelector para pegar o botão e o addEventListener para saber quando ele foi clicado.</p>
+            <button class="botao" id="btn-teste">Botão de teste</button>
         </div>
-    </main>
 
+        <div class="atividade">
+            <h2>Atividade 08: Itens de redes de computadores</h2>
+            <p>Fiz uma página com os principais itens de uma rede, e cada um tem uma página explicando o que ele faz.</p>
+            <p>O que aprendi: organizar o CSS, usar grid para deixar os itens lado a lado e fazer links entre as páginas.</p>
+            <a class="botao" href="view/redes.html">Ver atividade</a>
+        </div>
 
+        <div class="atividade">
+            <h2>N1 - Atividade 05: Galeria de imagens</h2>
+            <p>Fiz uma página com imagens de placas de vídeo e de gabinetes gamer, separadas em grupos.</p>
+            <p>O que aprendi: colocar imagens com a tag img, usar o alt para descrever a imagem e agrupar conteúdo com fieldset e legend.</p>
+            <a class="botao" href="view/atv5.html">Ver atividade</a>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
 </body>
 </html>

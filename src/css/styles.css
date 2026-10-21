@@ -1,126 +1,125 @@
-:root {
-    --cor-fundo: #f4f6f8;
-    --cor-superficie: #ffffff;
-    --cor-texto: #1f2933;
-    --cor-primaria: #0b62c4;
-    --cor-borda: #ccc;
-
-    --espaco-sm: 0.5rem;
-    --espaco-md: 1rem;
-    --espaco-lg: 1.5rem;
-    --espaco-xl: 2rem;
-
-    --fonte-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --tamanho-titulo: clamp(1.5rem, 4vw, 2.5rem);
-
-    --raio: 0.75rem;
-    --sombra: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --sombra-destaque: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --transicao: 0.2s ease;
-
-    --largura-max: 1100px;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
-    font-family: var(--fonte-base);
-    line-height: 1.5;
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-h1,
-h2 {
-    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
 }
 
 a {
-    color: var(--cor-primaria);
+    color: #0b62c4;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaco-xl);
-    max-width: var(--largura-max);
-    margin-inline: auto;
-    padding: var(--espaco-xl) var(--espaco-md);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
 }
 
 .grade {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: var(--espaco-lg);
-}
-
-@media (min-width: 768px) {
-    .grade--home-itens {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--espaco-sm);
-    padding-bottom: var(--espaco-md);
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.header__titulo {
-    margin: 0;
-    font-size: var(--tamanho-titulo);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .card {
-    background-color: var(--cor-superficie);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio);
-    box-shadow: var(--sombra);
-    transition: box-shadow var(--transicao), transform var(--transicao);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
 }
 
-.card:hover,
-.card:focus-within {
-    box-shadow: var(--sombra-destaque);
-    transform: translateY(-2px);
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.card__link {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaco-sm);
-    padding: var(--espaco-md);
-    border-radius: inherit;
-    color: inherit;
+.card a {
+    display: block;
+    padding: 15px;
+    color: #222;
     text-decoration: none;
 }
 
-.card__link:focus-visible {
-    outline: 3px solid var(--cor-primaria);
-    outline-offset: 2px;
-}
-
-.card__img {
+.card img {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 180px;
     object-fit: contain;
 }
 
-.card__titulo {
-    margin: 0;
-    font-size: 1.125rem;
-    text-align: center;
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+.atividade {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.atividade h2 {
+    margin-top: 0;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #0b62c4;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #094f9e;
+}
+
+.conteudo {
+    max-width: 700px;
+}
+
+.conteudo img {
+    width: 150px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.galeria legend {
+    font-weight: bold;
+}
+
+.galeria img {
+    width: 300px;
+    max-width: 100%;
+    height: 240px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .grade {
+        grid-template-columns: 1fr;
+    }
 }
